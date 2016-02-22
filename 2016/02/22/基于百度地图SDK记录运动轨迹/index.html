@@ -4,17 +4,40 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Orchan&#39;s Blog</title>
+  <title>基于百度地图SDK记录运动轨迹 | Orchan&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="喜欢摄影、折腾数码产品，目前是一个iOS Developer">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Orchan's Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="一、 前期准备工作首先需要登录百度开放平台下载iOS地图SDK（内含开发者文档、框架以及Demo示例），推荐下载全新Framework形式的静态库，配置更加简单方便，具体看下图：
+
+
+1. 新建Xcode工程File-&amp;gt;New-&amp;gt;Project-&amp;gt;Single View Application，填写好相关信息完成工程建立。
+
+2. 获取Bundle Identifier通过pro">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于百度地图SDK记录运动轨迹">
+<meta property="og:url" content="http://yoursite.com/2016/02/22/基于百度地图SDK记录运动轨迹/index.html">
 <meta property="og:site_name" content="Orchan's Blog">
-<meta property="og:description" content="喜欢摄影、折腾数码产品，目前是一个iOS Developer">
+<meta property="og:description" content="一、 前期准备工作首先需要登录百度开放平台下载iOS地图SDK（内含开发者文档、框架以及Demo示例），推荐下载全新Framework形式的静态库，配置更加简单方便，具体看下图：
+
+
+1. 新建Xcode工程File-&amp;gt;New-&amp;gt;Project-&amp;gt;Single View Application，填写好相关信息完成工程建立。
+
+2. 获取Bundle Identifier通过pro">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/9c83136agw1eu4gfymeosj20xm0dy77h.jpg">
+<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-16/88952331.jpg">
+<meta property="og:image" content="http://7xkf7q.com1.z0.glb.clouddn.com/15-7-16/5796134.jpg">
+<meta property="og:image" content="http://7xkf7q.com1.z0.glb.clouddn.com/15-7-16/13755680.jpg">
+<meta property="og:image" content="http://7xkf7q.com1.z0.glb.clouddn.com/15-7-16/52741447.jpg">
+<meta property="og:image" content="http://7xkf7q.com1.z0.glb.clouddn.com/15-7-16/86559904.jpg">
+<meta property="og:image" content="http://7xkf7q.com1.z0.glb.clouddn.com/15-7-16/34524205.jpg">
+<meta property="og:updated_time" content="2016-02-22T01:18:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Orchan's Blog">
-<meta name="twitter:description" content="喜欢摄影、折腾数码产品，目前是一个iOS Developer">
+<meta name="twitter:title" content="基于百度地图SDK记录运动轨迹">
+<meta name="twitter:description" content="一、 前期准备工作首先需要登录百度开放平台下载iOS地图SDK（内含开发者文档、框架以及Demo示例），推荐下载全新Framework形式的静态库，配置更加简单方便，具体看下图：
+
+
+1. 新建Xcode工程File-&amp;gt;New-&amp;gt;Project-&amp;gt;Single View Application，填写好相关信息完成工程建立。
+
+2. 获取Bundle Identifier通过pro">
   
     <link rel="alternative" href="/atom.xml" title="Orchan&#39;s Blog" type="application/atom+xml">
   
@@ -175,9 +198,7 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
-  
-    <article id="post-基于百度地图SDK记录运动轨迹" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-基于百度地图SDK记录运动轨迹" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/02/22/基于百度地图SDK记录运动轨迹/" class="article-date">
@@ -193,12 +214,27 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/22/基于百度地图SDK记录运动轨迹/">基于百度地图SDK记录运动轨迹</a>
+    <h1 class="article-title" itemprop="name">
+      基于百度地图SDK记录运动轨迹
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/mapTrack-BaiduMap/">mapTrack, BaiduMap</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -258,367 +294,68 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/mapTrack-BaiduMap/">mapTrack, BaiduMap</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/02/22/CoreBluetooth介绍/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CoreBluetooth介绍</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
-
-
-
-
-
-
-
-  
-    <article id="post-CoreBluetooth介绍" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/02/22/CoreBluetooth介绍/" class="article-date">
-  	<time datetime="2016-02-22T00:09:46.000Z" itemprop="datePublished">2016-02-22</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/22/CoreBluetooth介绍/">CoreBluetooth介绍</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="CoreBluetooth介绍"><a href="#CoreBluetooth介绍" class="headerlink" title="CoreBluetooth介绍"></a>CoreBluetooth介绍</h1><h1 id="CoreBluetooth介绍-1"><a href="#CoreBluetooth介绍-1" class="headerlink" title="CoreBluetooth介绍"></a>CoreBluetooth介绍</h1><p>#蓝牙名词</p>
-<ul>
-<li>BLE ==== buletouch low energy，蓝牙4.0设备因为低耗电，所以也叫做BLE</li>
-<li>peripheral,central == 外设和中心,发起连接的时central，被连接的设备为perilheral</li>
-<li>service and characteristic === 服务和特征</li>
-<li>每个设备会提供服务和特征，类似于服务端的api，但是结构不同。每个外设会有很多服务，每个服务中包含很多字段，这些字段的权限一般分为 读read，写write，通知notiy几种，就是我们连接设备后具体需要操作的内容。</li>
-<li>Description 每个characteristic可以对应一个或多个Description用户描述characteristic的信息或属性</li>
-</ul>
-<p>#使用方法</p>
-<blockquote>
-<p>CoreBluetooth框架的核心其实是两个东西，peripheral和central, 可以理解成外设和中心。对应他们分别有一组相关的API和类</p>
-</blockquote>
-<p><img src="http://images.jumppo.com/uploads/CoreBluetoothFramework.jpeg" alt="CoreBluetoothFramework.png"></p>
-<ul>
-<li>这两组api分别对应不同的业务场景，左侧叫做中心模式，就是以你的app作为中心，连接其他的外设的场景，而右侧称为外设模式，使用手机作为外设别其他中心设备操作的场景。</li>
-<li>服务和特征，特征的属性(service and characteristic):<br>每个设备都会有一些服务，每个服务里面都会有一些特征，特征就是具体键值对，提供数据的地方。每个特征属性分为这么几种：读，写，通知这么几种方式。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//objcetive c&#29305;&#24449;&#30340;&#23450;&#20041;&#26522;&#20030;&#10;typedef NS_OPTIONS(NSUInteger, CBCharacteristicProperties) &#123;&#10;CBCharacteristicPropertyBroadcast                                               = 0x01,&#10;CBCharacteristicPropertyRead                                                    = 0x02,&#10;CBCharacteristicPropertyWriteWithoutResponse                                    = 0x04,&#10;CBCharacteristicPropertyWrite                                                   = 0x08,&#10;CBCharacteristicPropertyNotify                                                  = 0x10,&#10;CBCharacteristicPropertyIndicate                                                = 0x20,&#10;CBCharacteristicPropertyAuthenticatedSignedWrites                               = 0x40,&#10;CBCharacteristicPropertyExtendedProperties                                      = 0x80,&#10;CBCharacteristicPropertyNotifyEncryptionRequired NS_ENUM_AVAILABLE(NA, 6_0)     = 0x100,&#10;CBCharacteristicPropertyIndicateEncryptionRequired NS_ENUM_AVAILABLE(NA, 6_0)   = 0x200&#10;&#125;;</span><br></pre></td></tr></table></figure>
-<p>#蓝牙中心模式流程</p>
-<ol>
-<li>建立中心角色</li>
-<li>扫描外设(discover)</li>
-<li>连接外设(connect)</li>
-<li>扫描外设中的服务和特征(discover)</li>
-</ol>
-<ul>
-<li>4.1 获取外设的services</li>
-<li>4.2 获取外设的Characteristics,获取Characteristics的值，获取Characteristics的Descriptor和Descriptor的值</li>
-</ul>
-<ol>
-<li>与外设做数据交互(explore and interact)</li>
-<li>订阅Characteristic的通知</li>
-<li>断开连接(disconnect)</li>
-</ol>
-<p>#蓝牙外设模式流程</p>
-<ol>
-<li>启动一个Peripheral管理对象</li>
-<li>本地Peripheral设置服务,特性,描述，权限等等</li>
-<li>Peripheral发送广告</li>
-<li>设置处理订阅、取消订阅、读characteristic、写characteristic的委托方法</li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
 
 
 
-
-
-
-  
-    <article id="post-NSPredicate" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/02/21/NSPredicate/" class="article-date">
-  	<time datetime="2016-02-21T08:14:21.000Z" itemprop="datePublished">2016-02-21</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/21/NSPredicate/">NSPredicate</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>NSPredicate 是一个Foundation的类，用来定义逻辑条件约束的获取或内存中的过滤搜索，相当于SQL中的<code>where</code>用法。</p>
-</blockquote>
-<h2 id="1-集合中使用-NSPredicate"><a href="#1-集合中使用-NSPredicate" class="headerlink" title="1.集合中使用 NSPredicate"></a>1.集合中使用 NSPredicate</h2><ul>
-<li>Foundation提供了<code>Predicate</code>来过滤<code>NSArray</code>、<code>NSMutableArray</code>、<code>NSSet</code>、<code>NSMutableSet</code>、<code>NSDictionary</code>等集合的方法。</li>
-<li><code>NSArray&amp;NSSet</code>（不可变集合）：通过<code>filteredArrayUsingPredicate</code>、<code>filteredSetUsingPredicate:</code>方法评估一个接收到的<code>predicate</code>来返回一个不可变集合。</li>
-<li><code>NSMutableArray&amp;NSMutableSet</code>（可变集合）：通过<code>filterUsingPredicate:</code>方法评估一个接收到的<code>predicate</code>来移除评估结果为FALSE的对象，这个可变数组将仅剩下符合要求的对象。同样地，也可以使用<code>filteredArrayUsingPredicate</code>、<code>filteredSetUsingPredicate:</code>方法来过滤返回一个符合要求的不可变集合。</li>
-<li><code>NSDictionary</code>：可以使用<code>predicate</code>来过滤分别过滤键值。</li>
-</ul>
-<h3 id="CodeSnippest"><a href="#CodeSnippest" class="headerlink" title="CodeSnippest:"></a>CodeSnippest:</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSMutableArray</span> *mutArr = [<span class="built_in">NSMutableArray</span> arrayWithObjects:<span class="string">@"bang"</span>,<span class="string">@"bing"</span>,<span class="string">@"jklb"</span>,<span class="string">@"dgjk"</span>,<span class="literal">nil</span>];</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"before filter mutArr is %@"</span>,mutArr); </span><br><span class="line"><span class="built_in">NSPredicate</span> *predicate = [<span class="built_in">NSPredicate</span> predicateWithFormat:<span class="string">@"SELF CONTAINS[cd] %@"</span>,<span class="string">@"g"</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 可变数组不会被改变，返回一个不可变数组</span></span><br><span class="line"><span class="built_in">NSArray</span> *arr = [mutArr filteredArrayUsingPredicate:predicate]; </span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"after filter mutArr is %@,arr is %@"</span>,mutArr,arr); </span><br><span class="line"></span><br><span class="line"><span class="comment">// 可变数组被变更，只剩下符合条件的对象</span></span><br><span class="line">[mutArr filterUsingPredicate:predicate]; </span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"after filter mutArr is %@"</span>,mutArr);</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="2-谓词语法"><a href="#2-谓词语法" class="headerlink" title="2.谓词语法"></a>2.谓词语法</h2><ul>
-<li><strong>替换</strong></li>
-</ul>
-<blockquote>
-<p><code>%@</code> 是对值为字符串，数字或者日期的对象的替换值，<code>%K</code> 是key path的替换值</p>
-</blockquote>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一种写法</span></span><br><span class="line"><span class="built_in">NSPredicate</span> *bobPredicate = [<span class="built_in">NSPredicate</span> predicateWithFormat:<span class="string">@"firstName = 'Bob'"</span>];</span><br><span class="line"><span class="built_in">NSPredicate</span> *ageIs33Predicate = [<span class="built_in">NSPredicate</span> predicateWithFormat:<span class="string">@"%K = %@"</span>, <span class="string">@"age"</span>, @<span class="number">33</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第二种写法</span></span><br><span class="line"><span class="built_in">NSPredicate</span> *bobPredicate = [<span class="built_in">NSPredicate</span> predicateWithFormat:<span class="string">@"@"</span>%K = %<span class="string">@",@"</span>firstName<span class="string">",@"</span>Bob<span class="string">""</span>];</span><br><span class="line"><span class="built_in">NSPredicate</span> *ageIs33Predicate = [<span class="built_in">NSPredicate</span> predicateWithFormat:<span class="string">@"age = 33"</span>];</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><code>$VARIABLE_NAME</code>是可以被NSPredicate <code>-predicateWithSubstitutionVariables:</code>替换的值。</p>
-</blockquote>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSMutableArray</span> *mutArr = [<span class="built_in">NSMutableArray</span> arrayWithObjects:<span class="string">@"bang"</span>,<span class="string">@"bing"</span>,<span class="string">@"jklb"</span>,<span class="string">@"dgjk"</span>,<span class="literal">nil</span>];</span><br><span class="line"><span class="built_in">NSPredicate</span> *predicate = [<span class="built_in">NSPredicate</span> predicateWithFormat:<span class="string">@"SELF CONTAINS[cd] $letter"</span>];</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,[mutArr filteredArrayUsingPredicate:[predicate predicateWithSubstitutionVariables:@&#123;<span class="string">@"letter"</span>:<span class="string">@"l"</span>&#125;]]);</span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>基本比较</strong> ：=(==)、&lt;、&gt;、&lt;=(=&lt;)、&gt;=(=&gt;)、!=(&lt;&gt;)、BETWEEN</li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSArray</span> *arr = @[@<span class="number">2</span>,@<span class="number">3</span>,@<span class="number">4</span>,@<span class="number">5</span>];</span><br><span class="line"><span class="built_in">NSPredicate</span> *arrPredicate = [<span class="built_in">NSPredicate</span> predicateWithFormat:<span class="string">@"SELF BETWEEN &#123;4,10&#125;"</span>];</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,[arr filteredArrayUsingPredicate:arrPredicate]);</span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>复合谓词</strong> ：AND(&amp;&amp;)、OR(||)、NOT(!)</li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSArray</span> *arr = @[<span class="string">@"kezhen"</span>,<span class="string">@"bole"</span>,<span class="string">@"Archae"</span>,<span class="string">@"arphan"</span>];</span><br><span class="line"><span class="built_in">NSPredicate</span> *arrPredicate = [<span class="built_in">NSPredicate</span> predicateWithFormat:<span class="string">@"(SELF BEGINSWITH %@) AND (SELF ENDSWITH %@)"</span>,<span class="string">@"b"</span>,<span class="string">@"e"</span>];</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,[arr filteredArrayUsingPredicate:arrPredicate]);</span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>字符串比较相关</strong>：<code>BEGINSWITH</code>：以指定字符串开始；<code>CONTAINS</code>：包含指定字符串；<code>ENDSWITH</code>：以指定字符串结束；<code>LIKE</code>：左边表达式等于右边表达式，<code>?</code>匹配一个字符，<code>*</code>匹配0个或多个字符；MATCHES：左边的表达式根据ICU v3（更多内容请查看ICU User Guide for Regular Expressions）的regex风格比较，等于右边的表达式。</li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// LIKE</span></span><br><span class="line"><span class="built_in">NSArray</span> *arr = @[<span class="string">@"kezhen"</span>,<span class="string">@"bole"</span>,<span class="string">@"orchan"</span>,<span class="string">@"orphan"</span>];</span><br><span class="line"><span class="built_in">NSPredicate</span> *arrPredicate = [<span class="built_in">NSPredicate</span> predicateWithFormat:<span class="string">@"SELF LIKE %@"</span>,<span class="string">@"?rc*"</span>];</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,[arr filteredArrayUsingPredicate:arrPredicate]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// BETWEEN</span></span><br><span class="line"><span class="built_in">NSArray</span> *arr = @[<span class="string">@"kezhen"</span>,<span class="string">@"bole"</span>,<span class="string">@"Archae"</span>,<span class="string">@"arphan"</span>];</span><br><span class="line"><span class="built_in">NSString</span> *regex = <span class="string">@"^A.+e$"</span>; <span class="comment">//以A开头，e结尾</span></span><br><span class="line"><span class="built_in">NSPredicate</span> *arrPredicate = [<span class="built_in">NSPredicate</span> predicateWithFormat:<span class="string">@"SELF MATCHES %@"</span>,regex];</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,[arr filteredArrayUsingPredicate:arrPredicate]);</span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>关系操作</strong>：ANY、ALL、NONE、IN</li>
-</ul>
-<hr>
-<h2 id="3-创建复合谓词"><a href="#3-创建复合谓词" class="headerlink" title="3.创建复合谓词"></a>3.创建复合谓词</h2><blockquote>
-<p>除了用复合谓词关键字连接组合多个谓词，还可以可用以下方法。</p>
-</blockquote>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="built_in">NSCompoundPredicate</span> andPredicateWithSubpredicates:@[[<span class="built_in">NSPredicate</span> predicateWithFormat:<span class="string">@"age &gt; 25"</span>], [<span class="built_in">NSPredicate</span> predicateWithFormat:<span class="string">@"firstName = %@"</span>, <span class="string">@"Quentin"</span>]]];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用关键字连接组合多个谓词</span></span><br><span class="line">[<span class="built_in">NSPredicate</span> predicateWithFormat:<span class="string">@"(age &gt; 25) AND (firstName = %@)"</span>, <span class="string">@"Quentin"</span>];</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="4-Block谓词"><a href="#4-Block谓词" class="headerlink" title="4.Block谓词"></a>4.Block谓词</h2><blockquote>
-<p>block可以封装任意的计算，所以有一个查询类是无法以NSPredicate格式字符串形式来表达的（比如对运行时被动态计算的值的评估）。</p>
-</blockquote>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSPredicate</span> *pre = [<span class="built_in">NSPredicate</span> predicateWithBlock:^<span class="built_in">BOOL</span>(<span class="keyword">id</span>  _Nonnull evaluatedObject, <span class="built_in">NSDictionary</span>&lt;<span class="built_in">NSString</span> *,<span class="keyword">id</span>&gt; * _Nullable bindings) &#123;</span><br><span class="line"><span class="keyword">return</span> [[evaluatedObject firstName] length] &lt; <span class="number">3</span>;</span><br><span class="line">&#125;];</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"firstName.length %@"</span>,[arr filteredArrayUsingPredicate:pre]);</span><br></pre></td></tr></table></figure>
-<ul>
-<li>参考来源：<br><a href="http://nshipster.cn/nspredicate/" target="_blank" rel="external">NSPredicate - Mattt Thompson撰写、 Zihan Xu翻译、 发布于2013年7月15日</a></li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/filter-NSPredicate/">filter NSPredicate</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="基于百度地图SDK记录运动轨迹" data-title="基于百度地图SDK记录运动轨迹" data-url="http://yoursite.com/2016/02/22/基于百度地图SDK记录运动轨迹/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
 
-
-
-
-
-
-  
-    <article id="post-AVAudioSession-Programming-Guide" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/02/21/AVAudioSession-Programming-Guide/" class="article-date">
-  	<time datetime="2016-02-21T06:43:09.000Z" itemprop="datePublished">2016-02-21</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/21/AVAudioSession-Programming-Guide/">AVAudioSession Programming Guide</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Defining-an-Audio-Session"><a href="#Defining-an-Audio-Session" class="headerlink" title="Defining an Audio Session"></a>Defining an Audio Session</h2><p>在你的应用中使用声音播放需要定义一个合适的<code>audio session</code>，它会配置你的应用的声音行为。例如</p>
-<ul>
-<li>是否让其他应用（音乐播放器）和你的应用声音进行混合</li>
-<li>来电或闹钟打断应用的声音播放应该如何恢复中断</li>
-<li>插拔耳机你的应用应该作何回应</li>
-</ul>
-<p>当你的应用启动时，<code>audio session</code>的配置影响到所有音频的活动除了使用<code>System Sounds Services</code> API 播放的音频。你可以通过<code>audio session</code>查询到你应用所在的设备的硬件特性，例如：声道数量和采样率等。你可以激活和反激活你的<code>audio session</code>，系统也能够主动反激活你的<code>audio session</code>，例如来电和闹钟。</p>
-<h3 id="1-1-Audio-Session-Default-Behavior"><a href="#1-1-Audio-Session-Default-Behavior" class="headerlink" title="1.1 Audio Session Default Behavior"></a>1.1 Audio Session Default Behavior</h3><p><code>audio session</code>有一些默认的行为：</p>
-<ul>
-<li>正在播放音视频时不可以进行录制</li>
-<li>应用声音播放跟随静音键的设置（静音键打开应用静音）</li>
-<li>应用声音跟随锁屏（锁频应用静音）</li>
-<li>应用声音独占播放（不允许其他应用与之混音）</li>
-</ul>
-<p>以上的这些音频默认行为来自系统默认选择的<code>AVAudioSessionCategorySoloAmbient</code>。<br>在开发过程中，你可以采用上面这些默认的音频行为。不过，在以下几种情况你可以放心地忽略<code>audio session</code>的设置：</p>
-<ul>
-<li>你的应用播放声音使用<code>System Sound Services or the UIKit playInputClick method</code>，且没有使用音其他音频API。<blockquote>
-<p><code>System Sound Services</code>用于播放用户交互界面上的简短声音提示以及调用设备的震动功能。<code>The UIKit playInputClick</code> 方法让你在自定义的输入或键盘附件中播放标准的敲击声，它的音频行为由系统处理。</p>
-</blockquote>
-</li>
-<li>你的应用根本没有使用到音频</li>
-</ul>
-<p>在有其他音频行为需求下，不要使用默认的<code>audio session</code>。</p>
-<h3 id="1-2-Why-a-Default-Audio-Session-Usually-Isn’t-What-You-Want"><a href="#1-2-Why-a-Default-Audio-Session-Usually-Isn’t-What-You-Want" class="headerlink" title="1.2 Why a Default Audio Session Usually Isn’t What You Want"></a>1.2 Why a Default Audio Session Usually Isn’t What You Want</h3><p>如果你没有实例化、配置以及清晰地使用你的<code>audio session</code>，你的应用则不能对音频线路改变或中断作出响应。<br>下面是一些演示默认音频行为的场景以及如何去改变它：</p>
-<ul>
-<li>场景1。你写了一个电子书应用。一个用户开始听《西游记》，不久设备自动锁屏了，应用也静音了。<blockquote>
-<p>为了保证设备锁屏后依然能够正常播放声音，应该配置一个<code>audio session</code>支持播放并且在<code>UIBackgroundModes</code>中设置打开音频后台使用开关。</p>
-</blockquote>
-</li>
-<li>场景2。你写了一个第一人称的射击游戏，使用了<code>OpenAL-based sound effects</code>。你提供了一个背景声音播放轨道，可以给用户播放音乐库的歌曲。当歌曲正在播放到一半时，你开炮射击了敌人的集中营，随之歌曲停止播放了。<blockquote>
-<p>为了确保你的歌曲不会被打断，应该设置<code>audio session</code>允许被混音。使用<code>AVAudioSessionCategoryAmbient</code>或者修改<code>AVAudioSessionCategoryPlayback</code>来支持混音。（详情见<code>Fine-Tuning category</code>）。</p>
-</blockquote>
-</li>
-<li>场景3。你写了一个流媒体音频应用，使用<code>Audio Queue Services</code>来播放。当一个用户在收听时，一个电话打进来了，正如我们所预料到的应用停止播放了。用户选择挂断电话，返回应用点击播放但不再响应。为了恢复播放，用户需要重启应用。<blockquote>
-<p>为了能够优雅地处理音频队列的中断，设置合适的<code>category</code>并且监听<code>AVAudioSessionInterruptionNotification</code>。</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="1-3-Initializing-Your-Audio-Session"><a href="#1-3-Initializing-Your-Audio-Session" class="headerlink" title="1.3 Initializing Your Audio Session"></a>1.3 Initializing Your Audio Session</h3><p>在你的应用启动时系统就提供了一个<code>audio session</code>对象。然而，为了处理中断事件你必须实例化这个<code>audio session</code>。</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// implicitly initializes your audio session</span></span><br><span class="line"><span class="built_in">AVAudioSession</span> *session = [<span class="built_in">AVAudioSession</span> sharedInstance];</span><br></pre></td></tr></table></figure>
-<p>这个<code>session</code>代表被初始化的<code>audio session</code>，可以马上使用。当你使用<code>AVAudioSession class’s interruption notifications</code>或<code>delegate protocols of the AVAudioPlayer and AVAudioRecorder classes</code>处理中断时，苹果官方推荐对<code>audio session</code>进行隐式地初始化。</p>
-<h3 id="1-4-Adding-Volume-and-Route-Control"><a href="#1-4-Adding-Volume-and-Route-Control" class="headerlink" title="1.4 Adding Volume and Route Control"></a>1.4 Adding Volume and Route Control</h3><p>使用<code>MPVolumeView</code>类去为你的APP展示音量和线路控制。这个<code>volume view</code>提供了一个滑动条在应用内部控制音量，还提供了一个旋钮选择音频输出线路。当输出音频到内置扬声器时，苹果官方推荐通过<code>AVAudioSessionPortOverride</code>使用<code>MPVolumeView route picker</code>。</p>
-<h3 id="1-5-Responding-to-Remote-Control-Events"><a href="#1-5-Responding-to-Remote-Control-Events" class="headerlink" title="1.5 Responding to Remote Control Events"></a>1.5 Responding to Remote Control Events</h3><p>远程控制事件让用户控制应用的多媒体播放。如果你的应用播放音频或视频内容，你可能想要响应来自传输控件或外部附件的远程控制事件。iOS转换<code>UIEvent</code>对象的命令，传递事件到APP。APP把事件发送给第一响应者，如果第一响应者没有处理它们，将沿着响应链传递下去。你的APP一定要是“Now Playing”，否则不能响应事件。</p>
-<h3 id="1-6-Activating-and-Deactivating-Your-Audio-Session"><a href="#1-6-Activating-and-Deactivating-Your-Audio-Session" class="headerlink" title="1.6 Activating and Deactivating Your Audio Session"></a>1.6 Activating and Deactivating Your Audio Session</h3><p>在你的APP启动时，系统将激活你的<code>audio session</code>。即使这样，苹果官方推荐在<code>viewDidLoad</code>方法中显式激活它，同时优先设置硬件偏好值。具体参照<code>Setting Preferred Hardware Values</code>代码，这可以测试是否激活成功。<br>下面展示如何激活APP的<code>audio session</code></p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSError</span> *activationError = <span class="literal">nil</span>;</span><br><span class="line"><span class="built_in">BOOL</span> success = [[<span class="built_in">AVAudioSession</span> sharedInstance] setActive: <span class="literal">YES</span> error: &amp;activationError];</span><br><span class="line"><span class="keyword">if</span> (!success) &#123; <span class="comment">/* handle the error in activationError */</span> &#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>反激活则传递 <code>NO</code> 到 <code>setActive</code> 参数中。</p>
-</blockquote>
-<p>在使用<code>AVAudioPlayer</code>对象播放声音或使用<code>AVAudioRecorder</code>对象录制音频的具体使用例子中，系统很关心在中断结束后<code>audio session</code>的重新激活。苹果官方推荐监听通知消息来重新激活<code>audio session</code>。如此，你可以确保重新激活成功，与此同时你可以更新应用的状态和UI。<br>大多数应用不需要显示地反激活<code>audio session</code>，如：VOIP、语音导航、录音的应用。</p>
-<ul>
-<li>要确保经常在后台运行的VOIP应用的<code>audio session</code>只有在处理通话时才是处于激活状态的。在后台等待处理电话通知时的<code>audio session</code>不应该被激活。</li>
-<li>设置为<code>recording category</code>应用的<code>audio session</code>只有在录制情况下才处于激活状态。在录制开始前和录制结束时，要确保你的应用的<code>audio session</code>是处于非激活状态来允许其他声音播放。</li>
-</ul>
-<h3 id="1-7-Checking-Whether-Other-Audio-Is-Playing-During-App-Launch"><a href="#1-7-Checking-Whether-Other-Audio-Is-Playing-During-App-Launch" class="headerlink" title="1.7 Checking Whether Other Audio Is Playing During App Launch"></a>1.7 Checking Whether Other Audio Is Playing During App Launch</h3><p>当用户启动APP的时候，或许设备正在播放音频。例如：当你启动应用时，设备音乐播放器在播放歌曲或浏览器在播放流媒体音频。如果你的应用是游戏，这种情况很明显。很多游戏有一个音乐声轨和一个音效轨道。在这种情况下，<code>Sound in iOS Human Interface Guidelines</code> 建议你音乐和游戏音效一起播放。检查<code>otherAudioPlaying</code>属性判断在你的应用启动时是否有其他音频正在播放。如果有其他音频正在播放，使你游戏应用的音乐声轨静音并且设置<code>AVAudioSessionCategorySoloAmbient</code>category。</p>
-<h3 id="1-8-Working-with-Inter-App-Audio"><a href="#1-8-Working-with-Inter-App-Audio" class="headerlink" title="1.8 Working with Inter-App Audio"></a>1.8 Working with Inter-App Audio</h3><p>在最基本的形式下，跨应用音频允许一个APP（节点APP）发送输出它的音频到另外一个APP（主APP）。也有可能是由主APP发送音频到节点APP，让节点APP来处理音频并返回结果给主APP。主APP需要有一个处于激活状态的<code>audio session</code>，然而节点APP只有在接收主APP输入时才需要一个处于激活状态的<code>audio session</code>。使用下面的指南来设置跨应用音频：</p>
-<ul>
-<li>为<code>host</code>and<code>node</code>APP的<code>inter-app-audio</code>授权。</li>
-<li>为<code>host</code>APP打开<code>UIBackgroundModes</code>的<code>audio</code>开关。</li>
-<li>为<code>node</code>APP打开<code>UIBackgroundModes</code>的<code>audio</code>开关，当<code>node</code>APP同时连接到一个<code>inter-app</code>audio host时使用输入或输出线路。</li>
-<li>为<code>host</code>和<code>node</code>APP设置<code>AVAudioSessionCategoryOptionMixWithOthers</code>。</li>
-<li>当<code>node</code>APP同时连接到一个<code>inter-app</code>audio host时，确保<code>node</code>APP的<code>audio session</code>在接收来自系统的输入（或者发送音频输出）。</li>
-</ul>
-<hr>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/AudioSession/">AudioSession</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -642,8 +379,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
