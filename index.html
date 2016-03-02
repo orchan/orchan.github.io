@@ -177,6 +177,109 @@
 
       <div class="body-wrap">
   
+    <article id="post-iOS指纹密码鉴定" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/02/iOS指纹密码鉴定/" class="article-date">
+  	<time datetime="2016-03-02T08:01:53.000Z" itemprop="datePublished">2016-03-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/02/iOS指纹密码鉴定/">iOS指纹密码鉴定</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="iPhone指纹-密码鉴定"><a href="#iPhone指纹-密码鉴定" class="headerlink" title="iPhone指纹/密码鉴定"></a>iPhone指纹/密码鉴定</h1><h2 id="一、两种鉴定方式"><a href="#一、两种鉴定方式" class="headerlink" title="一、两种鉴定方式"></a>一、两种鉴定方式</h2><blockquote>
+<p><code>LAPolicyDeviceOwnerAuthenticationWithBiometrics :</code> 生物指纹识别。验证弹框有两个按钮，第一个是取消按钮，第二个按钮可以自定义标题名称（输入密码）。只有在第一次指纹验证失败后才会出现第二个按钮，这种鉴定方式的第二个按钮的功能自定义。前三次指纹验证失败，指纹验证框不再弹出。再次重新进入验证，还有两次验证机会，如果还是验证失败，TOUCH ID 被锁住不再继续弹出指纹验证框。以后的每次验证都将会弹出设备密码输入框直至输入正确的设备密码方可解除TOUCH ID锁。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><code>LAPolicyDeviceOwnerAuthentication:</code> 生物指纹识别或系统密码验证。如果TOUCH ID 可用，且已经录入指纹，则优先调用指纹验证。其次是调用系统密码验证，如果没有开启设备密码，则不可以使用这种验证方式。指纹识别验证失败三次将弹出设备密码输入框，如果不进行密码输入。再次进来还可以有两次机会验证指纹，如果都失败则TOUCH ID被锁住，以后每次进来验证都是调用系统的设备密码直至输入正确的设备密码方可解除TOUCH ID锁。</p>
+</blockquote>
+<hr>
+<h2 id="二、鉴权错误信息类型"><a href="#二、鉴权错误信息类型" class="headerlink" title="二、鉴权错误信息类型"></a>二、鉴权错误信息类型</h2><h4 id="1-验证（指纹-密码）不能开启的错误信息"><a href="#1-验证（指纹-密码）不能开启的错误信息" class="headerlink" title="1. 验证（指纹/密码）不能开启的错误信息:"></a><em>1.</em> 验证（指纹/密码）不能开启的错误信息:</h4><ul>
+<li>LAErrorPasscodeNotSet       : 设备密码未设置</li>
+<li>LAErrorTouchIDNotAvailable  : TOUCH ID不可用</li>
+<li>LAErrorTouchIDNotEnrolled   : 指纹未录入</li>
+<li>LAErrorTouchIDLockout       : TOUCH ID被锁定</li>
+<li>LAErrorAppCancel            : APP调用了<code>- (void)invalidate</code>方法使 <code>LAContext</code>失效</li>
+<li>LAErrorInvalidContext       : 实例化的<code>LAContext</code>对象失效，再次调用<code>evaluation...</code>方法则会弹出此错误信息</li>
+</ul>
+<h4 id="2-其他错误信息"><a href="#2-其他错误信息" class="headerlink" title="2. 其他错误信息:"></a><em>2.</em> 其他错误信息:</h4><ul>
+<li>LAErrorAuthenticationFailed : 鉴定失败</li>
+<li>LAErrorUserCancel           : 用户取消</li>
+<li>LAErrorUserFallback         : 用户选择输入密码  </li>
+<li>LAErrorSystemCancel         : 系统取消（如：另外一个应用进入前台）   </li>
+</ul>
+<hr>
+<h2 id="三、Show-code"><a href="#三、Show-code" class="headerlink" title="三、Show code"></a>三、Show code</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)authentication</span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">// 初始化上下文对象</span></span><br><span class="line">LAContext* context = [[LAContext alloc] init];</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSError</span>* error = <span class="literal">nil</span>;</span><br><span class="line"><span class="built_in">NSString</span>* result = <span class="string">@"需要您的支付进行支付"</span>;</span><br><span class="line">context<span class="variable">.localizedFallbackTitle</span> = <span class="string">@"快捷支付"</span>;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"data before authentication = %@"</span>,[context evaluatedPolicyDomainState]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 首先使用canEvaluatePolicy 判断设备支持状态</span></span><br><span class="line"><span class="keyword">if</span> ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&amp;error]) &#123;</span><br><span class="line"><span class="comment">// 支持指纹验证</span></span><br><span class="line">[context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:result reply:^(<span class="built_in">BOOL</span> success, <span class="built_in">NSError</span> *error) &#123;</span><br><span class="line"><span class="keyword">if</span> (success) &#123;</span><br><span class="line"><span class="comment">//验证成功，主线程处理UI</span></span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"验证成功..."</span>);</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"data after authentication = %@"</span>,[context evaluatedPolicyDomainState]);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,error<span class="variable">.localizedDescription</span>);</span><br><span class="line"><span class="keyword">switch</span> (error<span class="variable">.code</span>) &#123;</span><br><span class="line"><span class="keyword">case</span> LAErrorSystemCancel:</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"Authentication was cancelled by the system"</span>);</span><br><span class="line"><span class="comment">//切换到其他APP，系统取消验证Touch ID</span></span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">case</span> LAErrorUserCancel:</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"Authentication was cancelled by the user"</span>);</span><br><span class="line"><span class="comment">//用户取消验证Touch ID</span></span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">case</span> LAErrorUserFallback:</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"User selected to enter custom password"</span>);</span><br><span class="line">[[<span class="built_in">NSOperationQueue</span> mainQueue] addOperationWithBlock:^&#123;</span><br><span class="line"><span class="comment">//用户选择输入密码，切换主线程处理</span></span><br><span class="line">&#125;];</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">case</span> LAErrorAuthenticationFailed:</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"Authentication Failed"</span>);</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">case</span> LAErrorTouchIDLockout:</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"TOUCH ID is locked out"</span>);</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">case</span> LAErrorAppCancel:</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"app cancle the authentication"</span>);</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">case</span> LAErrorInvalidContext:</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"context is invalidated"</span>);</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">default</span>:</span><br><span class="line">&#123;</span><br><span class="line">[[<span class="built_in">NSOperationQueue</span> mainQueue] addOperationWithBlock:^&#123;</span><br><span class="line"><span class="comment">//其他情况，切换主线程处理</span></span><br><span class="line">&#125;];</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;];</span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,error<span class="variable">.localizedDescription</span>); </span><br><span class="line"><span class="comment">//不支持指纹识别，LOG出错误详情</span></span><br><span class="line"><span class="keyword">switch</span> (error<span class="variable">.code</span>) &#123;</span><br><span class="line"><span class="keyword">case</span> LAErrorTouchIDNotEnrolled:</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"TouchID is not enrolled"</span>);</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">case</span> LAErrorPasscodeNotSet:</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"A passcode has not been set"</span>);</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">default</span>:</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"TouchID not available"</span>);</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<p><img src="http://7xkf7q.com1.z0.glb.clouddn.com/16-3-2/95533349.jpg" alt="a1"></p>
+<hr>
+<blockquote>
+<p>第一次进来验证，第二行的文字 <em>需要您的指纹进行支付</em> 可以自定，此时第二个按钮隐藏，第一次验证失败后才显示。</p>
+</blockquote>
+<hr>
+<p><img src="http://7xkf7q.com1.z0.glb.clouddn.com/16-3-2/69684575.jpg" alt="a2"></p>
+<hr>
+<blockquote>
+<p>第一次指纹验证失败，第二个按钮（标题自定义，默认为：<em>输入密码</em>）显示出来，第一种验证方式的此按钮功能自定，第二种验证方式的此按钮点击会调用设备密码输入框。</p>
+</blockquote>
+<hr>
+<p><img src="http://7xkf7q.com1.z0.glb.clouddn.com/16-3-2/71490751.jpg" alt="a3"></p>
+<hr>
+<blockquote>
+<p>设备密码输入框</p>
+</blockquote>
+<hr>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Authentication/">Authentication</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-避免键盘遮挡" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
