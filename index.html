@@ -233,6 +233,124 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/25/Core-Plot绘图边距问题/" itemprop="url">
+                  Core-Plot绘图边距问题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-25T16:22:18+08:00" content="2016-10-25">
+              2016-10-25
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/25/Core-Plot绘图边距问题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/25/Core-Plot绘图边距问题/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="http://7xkf7q.com1.z0.glb.clouddn.com/16-3-29/32941668.jpg" alt="1"></p>
+<hr>
+<blockquote>
+<p>默认四边的内边距都为20.0f。</p>
+</blockquote>
+<hr>
+<h3 id="1-内边距"><a href="#1-内边距" class="headerlink" title="1. 内边距"></a>1. 内边距</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 基于xy轴的图表创建</span></span><br><span class="line">CPTXYGraph *graph=[[CPTXYGraph alloc] initWithFrame:_hostView<span class="variable">.bounds</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使宿主视图的hostedGraph与CPTGraph关联</span></span><br><span class="line">_hostView<span class="variable">.hostedGraph</span> = graph;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置内边距：默认 20.0f</span></span><br><span class="line">graph<span class="variable">.paddingLeft</span>     = CPTFloat(<span class="number">0</span>);</span><br><span class="line">graph<span class="variable">.paddingTop</span>      = CPTFloat(<span class="number">200</span>);</span><br><span class="line">graph<span class="variable">.paddingRight</span>    = CPTFloat(<span class="number">0</span>);</span><br><span class="line">graph<span class="variable">.paddingBottom</span>   = CPTFloat(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>CPTGraphHostingView 的背景色为蓝色，plotAreaFrame 绘图区域背景色为黄色</p>
+</blockquote>
+<p><img src="http://7xkf7q.com1.z0.glb.clouddn.com/16-3-30/10449942.jpg" alt="2"></p>
+<h3 id="2-绘图边距"><a href="#2-绘图边距" class="headerlink" title="2. 绘图边距"></a>2. 绘图边距</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph<span class="variable">.plotAreaFrame</span><span class="variable">.paddingLeft</span>   = CPTFloat(<span class="number">0</span>);</span><br><span class="line">graph<span class="variable">.plotAreaFrame</span><span class="variable">.paddingTop</span>    = CPTFloat(<span class="number">200</span>);</span><br><span class="line">graph<span class="variable">.plotAreaFrame</span><span class="variable">.paddingRight</span>  = CPTFloat(<span class="number">0</span>);</span><br><span class="line">graph<span class="variable">.plotAreaFrame</span><span class="variable">.paddingBottom</span> = CPTFloat(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xkf7q.com1.z0.glb.clouddn.com/16-3-30/10319142.jpg" alt="3"></p>
+<blockquote>
+<p>设置绘图边距只会改变绘图图形的大小</p>
+</blockquote>
+<p>–</p>
+<p><img src="http://7xkf7q.com1.z0.glb.clouddn.com/16-3-29/43957191.jpg" alt="4"></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/26/改变状态栏样式/" itemprop="url">
                   改变状态栏样式
                 </a>
@@ -1603,7 +1721,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1620,7 +1738,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

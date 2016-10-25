@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="iOS," />
+  <meta name="keywords" content="graph, core-plot," />
 
 
 
@@ -84,44 +84,29 @@
 
 
 
-<meta name="description" content="两种状态栏样式：
-
-要改变状态栏的样式，需要在UIViewController中重载如下方法：
+<meta name="description" content="默认四边的内边距都为20.0f。
 
 
-123- (UIStatusBarStyle)preferredStatusBarStyle &amp;#123;return UIStatusBarStyleLightContent;&amp;#125;
-
-这个方法不能直接调用，需要在改变样式的地方调用如下方法：
-
-1234- (void)viewWillApp">
+1. 内边距1234567891011// 基于xy轴的图表创建CPTXYGraph *graph=[[CPTXYGraph alloc] initWithFrame:_hostView.bounds];// 使宿主视图的hostedGraph与CPTGraph关联_hostView.hostedGraph = graph;// 设置内边距：默认 20.0fg">
 <meta property="og:type" content="article">
-<meta property="og:title" content="改变状态栏样式">
-<meta property="og:url" content="http://yoursite.com/2016/03/26/改变状态栏样式/index.html">
+<meta property="og:title" content="Core-Plot绘图边距问题">
+<meta property="og:url" content="http://yoursite.com/2016/10/25/Core-Plot绘图边距问题/index.html">
 <meta property="og:site_name" content="Orchan's Blog">
-<meta property="og:description" content="两种状态栏样式：
-
-要改变状态栏的样式，需要在UIViewController中重载如下方法：
+<meta property="og:description" content="默认四边的内边距都为20.0f。
 
 
-123- (UIStatusBarStyle)preferredStatusBarStyle &amp;#123;return UIStatusBarStyleLightContent;&amp;#125;
-
-这个方法不能直接调用，需要在改变样式的地方调用如下方法：
-
-1234- (void)viewWillApp">
-<meta property="og:image" content="http://7xkf7q.com1.z0.glb.clouddn.com/16-3-10/42073727.jpg">
-<meta property="og:updated_time" content="2016-03-26T05:39:20.000Z">
+1. 内边距1234567891011// 基于xy轴的图表创建CPTXYGraph *graph=[[CPTXYGraph alloc] initWithFrame:_hostView.bounds];// 使宿主视图的hostedGraph与CPTGraph关联_hostView.hostedGraph = graph;// 设置内边距：默认 20.0fg">
+<meta property="og:image" content="http://7xkf7q.com1.z0.glb.clouddn.com/16-3-29/32941668.jpg">
+<meta property="og:image" content="http://7xkf7q.com1.z0.glb.clouddn.com/16-3-30/10449942.jpg">
+<meta property="og:image" content="http://7xkf7q.com1.z0.glb.clouddn.com/16-3-30/10319142.jpg">
+<meta property="og:image" content="http://7xkf7q.com1.z0.glb.clouddn.com/16-3-29/43957191.jpg">
+<meta property="og:updated_time" content="2016-10-25T08:25:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="改变状态栏样式">
-<meta name="twitter:description" content="两种状态栏样式：
-
-要改变状态栏的样式，需要在UIViewController中重载如下方法：
+<meta name="twitter:title" content="Core-Plot绘图边距问题">
+<meta name="twitter:description" content="默认四边的内边距都为20.0f。
 
 
-123- (UIStatusBarStyle)preferredStatusBarStyle &amp;#123;return UIStatusBarStyleLightContent;&amp;#125;
-
-这个方法不能直接调用，需要在改变样式的地方调用如下方法：
-
-1234- (void)viewWillApp">
+1. 内边距1234567891011// 基于xy轴的图表创建CPTXYGraph *graph=[[CPTXYGraph alloc] initWithFrame:_hostView.bounds];// 使宿主视图的hostedGraph与CPTGraph关联_hostView.hostedGraph = graph;// 设置内边距：默认 20.0fg">
 
 
 
@@ -139,7 +124,7 @@
   };
 </script>
 
-  <title> 改变状态栏样式 | Orchan's Blog </title>
+  <title> Core-Plot绘图边距问题 | Orchan's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -259,7 +244,7 @@
             
             
               
-                改变状态栏样式
+                Core-Plot绘图边距问题
               
             
           </h1>
@@ -271,38 +256,19 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-26T13:36:49+08:00" content="2016-03-26">
-              2016-03-26
+            <time itemprop="dateCreated" datetime="2016-10-25T16:22:18+08:00" content="2016-10-25">
+              2016-10-25
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/StatusBar/" itemprop="url" rel="index">
-                    <span itemprop="name">StatusBar</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/26/改变状态栏样式/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/26/改变状态栏样式/" itemprop="commentsCount"></span>
+                <a href="/2016/10/25/Core-Plot绘图边距问题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/25/Core-Plot绘图边距问题/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -325,33 +291,25 @@
       
 
       
-        <ul>
-<li><p>两种状态栏样式：<br><img src="http://7xkf7q.com1.z0.glb.clouddn.com/16-3-10/42073727.jpg" alt="1"></p>
-</li>
-<li><p>要改变状态栏的样式，需要在<code>UIViewController</code>中重载如下方法：</p>
-</li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">UIStatusBarStyle</span>)preferredStatusBarStyle &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="built_in">UIStatusBarStyleLightContent</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>这个方法不能直接调用，需要在改变样式的地方调用如下方法：</li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)viewWillAppear:(Bool)animated &#123;</span><br><span class="line">[<span class="keyword">super</span> viewWillAppear:animated];</span><br><span class="line">[<span class="keyword">self</span> setNeedsStatusBarAppearanceUpdate];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="显示隐藏"><a href="#显示隐藏" class="headerlink" title="显示隐藏"></a>显示隐藏</h2><ul>
-<li>在控制器中重载如下方法：</li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- (Bool)prefersStatusBarHidden &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p><img src="http://7xkf7q.com1.z0.glb.clouddn.com/16-3-29/32941668.jpg" alt="1"></p>
+<hr>
 <blockquote>
-<p>同样不可以直接调用，需要调用这个方法使其生效：<code>[self setNeedsStatusBarAppearanceUpdate]</code>。</p>
+<p>默认四边的内边距都为20.0f。</p>
 </blockquote>
-<h2 id="动画效果"><a href="#动画效果" class="headerlink" title="动画效果"></a>动画效果</h2><ul>
-<li>两种动画效果：<code>UIStatusBarAnimationFade</code>、<code>UIStatusBarAnimationSlide</code></li>
-<li>在控制器中重载如下方法：</li>
-</ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">UIStatusBarAnimation</span>)preferredStatusBarUpdatedAnimation &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="built_in">UIStatusBarAnimationSlide</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="1-内边距"><a href="#1-内边距" class="headerlink" title="1. 内边距"></a>1. 内边距</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 基于xy轴的图表创建</span></span><br><span class="line">CPTXYGraph *graph=[[CPTXYGraph alloc] initWithFrame:_hostView<span class="variable">.bounds</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使宿主视图的hostedGraph与CPTGraph关联</span></span><br><span class="line">_hostView<span class="variable">.hostedGraph</span> = graph;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置内边距：默认 20.0f</span></span><br><span class="line">graph<span class="variable">.paddingLeft</span>     = CPTFloat(<span class="number">0</span>);</span><br><span class="line">graph<span class="variable">.paddingTop</span>      = CPTFloat(<span class="number">200</span>);</span><br><span class="line">graph<span class="variable">.paddingRight</span>    = CPTFloat(<span class="number">0</span>);</span><br><span class="line">graph<span class="variable">.paddingBottom</span>   = CPTFloat(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>重载了这个方法还没有动画效果先，需要把<code>[self setNeedsStatusBarAppearanceUpdate]</code>放在block中执行。</p>
+<p>CPTGraphHostingView 的背景色为蓝色，plotAreaFrame 绘图区域背景色为黄色</p>
 </blockquote>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="built_in">UIView</span> animateWithDuration:<span class="number">0.3</span> </span><br><span class="line">animations:^&#123; </span><br><span class="line">[<span class="keyword">self</span> setNeedsStatusBarAppearanceUpdate];</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xkf7q.com1.z0.glb.clouddn.com/16-3-30/10449942.jpg" alt="2"></p>
+<h3 id="2-绘图边距"><a href="#2-绘图边距" class="headerlink" title="2. 绘图边距"></a>2. 绘图边距</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph<span class="variable">.plotAreaFrame</span><span class="variable">.paddingLeft</span>   = CPTFloat(<span class="number">0</span>);</span><br><span class="line">graph<span class="variable">.plotAreaFrame</span><span class="variable">.paddingTop</span>    = CPTFloat(<span class="number">200</span>);</span><br><span class="line">graph<span class="variable">.plotAreaFrame</span><span class="variable">.paddingRight</span>  = CPTFloat(<span class="number">0</span>);</span><br><span class="line">graph<span class="variable">.plotAreaFrame</span><span class="variable">.paddingBottom</span> = CPTFloat(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xkf7q.com1.z0.glb.clouddn.com/16-3-30/10319142.jpg" alt="3"></p>
+<blockquote>
+<p>设置绘图边距只会改变绘图图形的大小</p>
+</blockquote>
+<p>–</p>
+<p><img src="http://7xkf7q.com1.z0.glb.clouddn.com/16-3-29/43957191.jpg" alt="4"></p>
+
       
     </div>
 
@@ -393,7 +351,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/iOS/" rel="tag">#iOS</a>
+            <a href="/tags/graph-core-plot/" rel="tag">#graph, core-plot</a>
           
         </div>
       
@@ -402,17 +360,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/02/iOS指纹密码鉴定/" rel="next" title="iOS指纹密码鉴定">
-                <i class="fa fa-chevron-left"></i> iOS指纹密码鉴定
+              <a href="/2016/03/26/改变状态栏样式/" rel="next" title="改变状态栏样式">
+                <i class="fa fa-chevron-left"></i> 改变状态栏样式
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/25/Core-Plot绘图边距问题/" rel="prev" title="Core-Plot绘图边距问题">
-                Core-Plot绘图边距问题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -438,8 +392,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/26/改变状态栏样式/"
-           data-title="改变状态栏样式" data-url="http://yoursite.com/2016/03/26/改变状态栏样式/">
+      <div class="ds-thread" data-thread-key="2016/10/25/Core-Plot绘图边距问题/"
+           data-title="Core-Plot绘图边距问题" data-url="http://yoursite.com/2016/10/25/Core-Plot绘图边距问题/">
       </div>
     
   </div>
@@ -530,7 +484,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#显示隐藏"><span class="nav-number">1.</span> <span class="nav-text">显示隐藏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动画效果"><span class="nav-number">2.</span> <span class="nav-text">动画效果</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-内边距"><span class="nav-number">1.</span> <span class="nav-text">1. 内边距</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-绘图边距"><span class="nav-number">2.</span> <span class="nav-text">2. 绘图边距</span></a></li></ol></div>
             
           </div>
         </section>
